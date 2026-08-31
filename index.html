@@ -3,141 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowCare | Seu Guia Definitivo de Skincare</title>
-    <!-- Importação de fontes elegantes do Google Fonts -->
+    <title>Vesta Derm | Alta Performance em Skincare</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Vinculação com o arquivo CSS externo -->
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Menu de Navegação Superior -->
     <header class="main-header">
-        <div class="logo">Glow<span>Care</span></div>
+        <div class="logo">Vesta<span>Derm</span></div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="#passos">Rotina Básica</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#passos">Os 3 Passos</a></li>
+                <li><a href="#cronograma">Dia & Noite</a></li>
+                <li><a href="#produtos">Guia de Ativos</a></li>
                 <li><a href="#tipos-pele">Tipos de Pele</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Banner Principal de Boas-Vindas -->
+    <!-- Banner Principal (Hero) com Imagem de Fundo Premium -->
     <section class="hero-banner">
         <div class="hero-content">
-            <h1>A beleza de cuidar da sua pele todos os dias</h1>
-            <p>Descubra os produtos ideais e monte a rotina perfeita para o seu rosto de forma simples e descomplicada.</p>
-            <a href="#tipos-pele" class="btn-primary">Descubra sua pele</a>
+            <span class="hero-tagline">✨ O ritual sagrado da sua pele</span>
+            <h1>Sua pele saudável, radiante e protegida</h1>
+            <p>Descubra a ciência por trás do autocuidado. Na Vesta Derm, simplificamos a sua rotina com guias práticos focados nas reais necessidades do seu rosto.</p>
+            <a href="#tipos-pele" class="btn-primary">Descobrir Meu Tipo de Pele</a>
         </div>
     </section>
 
-    <!-- Seção 1: Os 3 Passos Fundamentais -->
+    <!-- Seção 1: Os 3 Passos Fundamentais (com Fotos Temáticas) -->
     <section id="passos" class="section-container">
-        <h2 class="section-title">Os 3 Passos Indispensáveis</h2>
-        <p class="section-subtitle">Antes de qualquer tratamento específico, toda pele precisa do trio essencial:</p>
+        <div class="center-text">
+            <h2 class="section-title">Os Três Pilares Indispensáveis</h2>
+            <p class="section-subtitle">Antes de inserir qualquer ativo avançado, construa uma barreira cutânea forte usando a tríade clássica da dermatologia.</p>
+        </div>
         
-        <div class="grid-container de-3-colunas">
+        <div class="grid-passos">
             <div class="card-passo">
-                <span class="numero">1</span>
-                <h3>Limpar</h3>
-                <p>Remove as impurezas, poluição e o excesso de sebo acumulado sem agredir a barreira natural da pele.</p>
+                <div class="card-image-wrap">
+                    <img src="https://unsplash.com" alt="Limpeza facial delicada com água">
+                </div>
+                <div class="card-passo-content">
+                    <span class="numero">01</span>
+                    <h3>Limpar</h3>
+                    <p>Purifica a superfície, elimina resíduos de poluição e desobstrui os poros suavemente, mantendo a hidratação natural.</p>
+                </div>
             </div>
             <div class="card-passo">
-                <span class="numero">2</span>
-                <h3>Hidratar</h3>
-                <p>Devolve a água e os nutrientes necessários. Essencial para manter o viço, elasticidade e proteção de todas as peles.</p>
+                <div class="card-image-wrap">
+                    <img src="https://unsplash.com" alt="Aplicação de hidratante facial em textura gel">
+                </div>
+                <div class="card-passo-content">
+                    <span class="numero">02</span>
+                    <h3>Hidratar</h3>
+                    <p>Fornece moléculas de água para as camadas celulares. Essencial para manter a elasticidade, jovialidade e o viço natural.</p>
+                </div>
             </div>
             <div class="card-passo">
-                <span class="numero">3</span>
-                <h3>Proteger</h3>
-                <p>O protetor solar previne o envelhecimento precoce, manchas e protege contra a radiação UV nociva.</p>
+                <div class="card-image-wrap">
+                    <img src="https://unsplash.com" alt="Protetor solar sendo aplicado na pele exposta ao sol">
+                </div>
+                <div class="card-passo-content">
+                    <span class="numero">03</span>
+                    <h3>Proteger</h3>
+                    <p>O melhor produto antienvelhecimento que existe. Bloqueia a radiação ultravioleta, prevenindo manchas, flacidez e rugas precoces.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção 2: Dicionário de Ativos e Produtos -->
-    <section id="produtos" class="section-bg-light">
+    <!-- Seção: Cronograma Visual Dia & Noite -->
+    <section id="cronograma" class="section-bg-light">
         <div class="section-container">
-            <h2 class="section-title">Para que serve cada produto?</h2>
-            
-            <div class="lista-produtos">
-                <article class="item-produto">
-                    <h3>Gel/Sabonete de Limpeza</h3>
-                    <p>Deve ser o primeiro passo do dia e da noite. Limpa os poros profundamente e prepara o rosto para receber os próximos passos.</p>
-                </article>
+            <div class="center-text">
+                <h2 class="section-title">Cronograma: Ordem de Aplicação</h2>
+                <p class="section-subtitle">Saber a sequência correta potencializa os resultados e evita desperdício de produto.</p>
+            </div>
 
-                <article class="item-produto">
-                    <h3>Tônico Facial</h3>
-                    <p>Equilibra o pH da pele após a limpeza, elimina os últimos resíduos e ajuda na absorção dos tratamentos seguintes.</p>
-                </article>
+            <div class="grid-cronograma">
+                <!-- Rotina Diurna -->
+                <div class="bloco-cronograma dia">
+                    <div class="cronograma-header">
+                        <span class="astro-icon">☀️</span>
+                        <h3>Rotina da Manhã</h3>
+                        <span class="objetivo-tag">Foco: Proteção e Antioxidantes</span>
+                    </div>
+                    <ol class="lista-cronograma">
+                        <li><strong>1. Sabonete Facial:</strong> Limpeza leve para remover os produtos da noite.</li>
+                        <li><strong>2. Tônico / Bruma:</strong> Devolve o equilíbrio e refresca a pele.</li>
+                        <li><strong>3. Vitamina C / Sérum:</strong> Previne o envelhecimento causado pelo sol.</li>
+                        <li><strong>4. Hidratante:</strong> Mantém a água na pele ao longo do dia.</li>
+                        <li><strong>5. Protetor Solar:</strong> O passo mais importante. Não pule nunca!</li>
+                    </ol>
+                </div>
 
-                <article class="item-produto">
-                    <h3>Sérum de Tratamento</h3>
-                    <p>Líquidos fluidos e altamente concentrados em ativos (como Vitamina C ou Ácido Hialurônico) para tratar problemas específicos como linhas, manchas ou acne.</p>
-                </article>
-
-                <article class="item-produto">
-                    <h3>Creme/Gel Hidratante</h3>
-                    <p>Cria uma película protetora que impede a perda de água. Deve ser usado mesmo por quem tem pele muito oleosa.</p>
-                </article>
+                <!-- Rotina Noturna -->
+                <div class="bloco-cronograma noite">
+                    <div class="cronograma-header">
+                        <span class="astro-icon">🌙</span>
+                        <h3>Rotina da Noite</h3>
+                        <span class="objetivo-tag">Foco: Renovação e Nutrição</span>
+                    </div>
+                    <ol class="lista-cronograma">
+                        <li><strong>1. Limpeza Dupla (Opcional):</strong> Óleo de limpeza seguido por sabonete.</li>
+                        <li><strong>2. Ácidos / Tratamento:</strong> Retinol, Ácido Glicólico ou ativos renovadores.</li>
+                        <li><strong>3. Creme de Olhos:</strong> Hidratação focada na região sensível das pálpebras.</li>
+                        <li><strong>4. Hidratante Rico:</strong> Texturas mais densas para regeneração celular noturna.</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção 3: Guia por Tipo de Pele -->
-    <section id="tipos-pele" class="section-container">
-        <h2 class="section-title">O Produto Certo para Sua Pele</h2>
-        <p class="section-subtitle">Identifique o seu tipo de pele e veja quais texturas e ativos buscar:</p>
+    <!-- Seção: Dicionário de Ativos e Produtos (com Mosaico Visual de Frascos) -->
+    <section id="produtos" class="section-container">
+        <div class="layout-split-produtos">
+            <div class="produtos-texto-lado">
+                <h2 class="section-title">Dicionário Vesta Derm</h2>
+                <p class="section-subtitle-lado">Entenda a função técnica e prática de cada categoria no seu estoque de beleza.</p>
+                
+                <div class="grid-produtos">
+                    <article class="item-produto">
+                        <div class="produto-header">
+                            <span class="badge">Limpeza</span>
+                            <h3>Gel/Sabonete Facial</h3>
+                        </div>
+                        <p>Fórmulas desenvolvidas especificamente para o pH do rosto. Limpam sem causar o "efeito rebote" que sabonetes corporais provocam.</p>
+                    </article>
 
-        <div class="grid-container de-3-colunas">
-            <!-- Pele Oleosa -->
-            <div class="card-pele pele-oleosa">
-                <h3>Pele Oleosa / Acneica</h3>
-                <p class="caracteristica">Apresenta brilho excessivo, poros dilatados e tendência a cravos e espinhas.</p>
-                <h4>O que procurar:</h4>
-                <ul>
-                    <li>Texturas em Gel ou Gel-Creme</li>
-                    <li>Sabonetes com Ácido Salicílico</li>
-                    <li>Ativos como Niacinamida e Zinco</li>
-                    <li>Protetores solares com efeito Matte</li>
-                </ul>
+                    <article class="item-produto">
+                        <div class="produto-header">
+                            <span class="badge">Equilíbrio</span>
+                            <h3>Tônico Facial</h3>
+                        </div>
+                        <p>Líquido de absorção instantânea que prepara a barreira cutânea, facilitando a penetração profunda de cremes e séruns densos.</p>
+                    </article>
+
+                    <article class="item-produto">
+                        <div class="produto-header">
+                            <span class="badge">Tratamento</span>
+                            <h3>Sérum Concentrado</h3>
+                        </div>
+                        <p>Veículo leve e fluído, ideal para entregar altas dosagens de vitaminas e ácidos diretamente nas camadas internas da derme.</p>
+                    </article>
+
+                    <article class="item-produto">
+                        <div class="produto-header">
+                            <span class="badge">Nutrição</span>
+                            <h3>Creme ou Gel Hidratante</h3>
+                        </div>
+                        <p>Atua selando os passos anteriores. Impede que a umidade natural evapore, mantendo o aspecto macio e a barreira intacta.</p>
+                    </article>
+                </div>
             </div>
-
-            <!-- Pele Seca -->
-            <div class="card-pele pele-seca">
-                <h3>Pele Seca</h3>
-                <p class="caracteristica">Costuma repuxar, descamar levemente, tem toque opaco e pouca luminosidade.</p>
-                <h4>O que procurar:</h4>
-                <ul>
-                    <li>Texturas em Creme denso ou Loção</li>
-                    <li>Limpadores faciais hidratantes</li>
-                    <li>Ativos como Ácido Hialurônico e Ceramidas</li>
-                    <li>Óleos faciais nutritivos para a noite</li>
-                </ul>
-            </div>
-
-            <!-- Pele Mista -->
-            <div class="card-pele pele-mista">
-                <h3>Pele Mista</h3>
-                <p class="caracteristica">Oleosidade concentrada na "Zona T" (testa, nariz e queixo) com bochechas normais ou secas.</p>
-                <h4>O que procurar:</h4>
-                <ul>
-                    <li>Texturas em Gel-Creme ou Fluidas</li>
-                    <li>Produtos equilibrantes</li>
-                    <li>Hidratantes livres de óleo (Oil-free)</li>
-                    <li>Uso de máscaras de argila apenas na Zona T</li>
-                </ul>
+            <div class="produtos-imagem-lado">
+                <img src="https://unsplash.com" alt="Frascos de vidro minimalistas de séruns e óleos de skincare em fundo claro">
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="main-footer">
-        <p>&copy; 2026 GlowCare. Desenvolvido com carinho para o seu autocuidado.</p>
-    </footer>
+    <!-- Seção: Guia por Tipo de Pele -->
+    <section id="tipos-pele" class="section-bg-light">
+        <div class="section-container">
+            <div class="center-text">
+                <h2 class="section-title">O Match Perfeito Para Sua Pele</h2>
+                <p class="section-subtitle">A escolha inteligente depende da textura ideal para a sua genética cutânea. Identifique-se abaixo:</p>
+            </div>
 
-</body>
-</html>
+            <div class="grid-pele">
+                <!-- Pele Oleosa -->
+                <div class="card-pele oleosa">
+                    <div class="pele-tag">Pele Oleosa / Acneica</div>
+                    <p class="caracteristica">Apresenta brilho excessivo ao longo do dia, poros aparentes na zona central e tendência ao desenvolvimento de acne.</p>
+                    <div class="rotina-sugerida">
+                        <h4>Ativos e Texturas:</h4>
+                        <ul>
