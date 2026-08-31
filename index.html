@@ -3,113 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vesta Derm | Skincare de Alta Performance</title>
+    <title>Vesta Derm | Skincare Premium & Inteligente</title>
     
-    <!-- Fontes Premium do Google -->
+    <!-- Fontes do Google para design de alta costura e estética -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS INTEGRADO (Estilização Visual) -->
+    <!-- CSS INTEGRADO (Visual e Animações) -->
     <style>
-        /* Resets Globais */
+        /* Estilos de Reset e Base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
         body { font-family: 'Poppins', sans-serif; color: #433c3a; background-color: #fdfcfc; line-height: 1.6; overflow-x: hidden; }
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
-        /* Utilitários de Layout */
-        .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
-        .section-bg-light { background-color: #f6f0ed; }
-        .center-text { text-align: center; max-width: 700px; margin: 0 auto 50px auto; }
+        /* Estrutura do Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .bg-light { background-color: #f6f0ed; }
+        .text-center { text-align: center; max-width: 700px; margin: 0 auto 50px auto; }
         .section-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; color: #1e1918; margin-bottom: 12px; }
         .section-subtitle { font-size: 1.1rem; color: #7a6c68; font-weight: 300; }
 
-        /* Cabeçalho e Menu */
-        .main-header { background-color: rgba(253, 252, 252, 0.96); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); backdrop-filter: blur(8px); }
+        /* Menu de Navegação */
+        .header { background-color: rgba(253, 252, 252, 0.96); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); backdrop-filter: blur(8px); }
         .logo { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: #1e1918; letter-spacing: 0.5px; }
         .logo span { color: #c98e76; font-weight: 400; }
-        .nav-menu ul { display: flex; list-style: none; gap: 30px; }
-        .nav-menu a { text-decoration: none; color: #574c49; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
-        .nav-menu a:hover { color: #c98e76; }
+        .nav ul { display: flex; list-style: none; gap: 30px; }
+        .nav a { text-decoration: none; color: #574c49; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        .nav a:hover { color: #c98e76; }
 
         /* Ícone do Carrinho */
-        .cart-icon-container { cursor: pointer; position: relative; padding: 8px; background-color: #f6f0ed; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
-        .cart-icon-container:hover { transform: scale(1.05); }
-        .cart-count { position: absolute; top: -3px; right: -3px; background-color: #1e1918; color: #fff; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+        .cart-icon { cursor: pointer; position: relative; padding: 8px; background-color: #f6f0ed; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
+        .cart-icon:hover { transform: scale(1.05); }
+        .cart-badge { position: absolute; top: -3px; right: -3px; background-color: #1e1918; color: #fff; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
 
         /* Banner Principal (Hero) */
-        .hero-banner { background: linear-gradient(rgba(246, 240, 246, 0.55), rgba(253, 252, 252, 0.93)), url('https://unsplash.com') center/cover no-repeat; height: 80vh; display: flex; align-items: center; padding: 0 50px; margin-top: 70px; }
+        .hero { background: linear-gradient(rgba(246, 240, 246, 0.55), rgba(253, 252, 252, 0.93)), url('https://unsplash.com') center/cover no-repeat; height: 80vh; display: flex; align-items: center; padding: 0 50px; margin-top: 70px; }
         .hero-content { max-width: 680px; }
-        .hero-tagline { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: #b56c4d; font-weight: 600; display: block; margin-bottom: 15px; }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #1e1918; line-height: 1.15; margin-bottom: 20px; }
-        .hero-content p { font-size: 1.15rem; color: #574c49; margin-bottom: 30px; font-weight: 300; }
-        .btn-primary { display: inline-block; background-color: #1e1918; color: #ffffff; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 500; box-shadow: 0 4px 15px rgba(30, 25, 24, 0.15); transition: all 0.3s; }
-        .btn-primary:hover { background-color: #c98e76; transform: translateY(-2px); }
+        .hero-tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: #b56c4d; font-weight: 600; display: block; margin-bottom: 15px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #1e1918; line-height: 1.15; margin-bottom: 20px; }
+        .hero p { font-size: 1.15rem; color: #574c49; margin-bottom: 30px; font-weight: 300; }
+        .btn { display: inline-block; background-color: #1e1918; color: #ffffff; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 500; box-shadow: 0 4px 15px rgba(30, 25, 24, 0.15); transition: all 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background-color: #c98e76; transform: translateY(-2px); }
 
         /* Faixa de Benefícios */
-        .benefits-bar { background-color: #f6f0ed; display: flex; justify-content: space-around; padding: 18px; flex-wrap: wrap; gap: 15px; border-bottom: 1px solid #eee5e2; }
+        .benefits { background-color: #f6f0ed; display: flex; justify-content: space-around; padding: 18px; flex-wrap: wrap; gap: 15px; border-bottom: 1px solid #eee5e2; }
         .benefit-item { font-size: 0.9rem; font-weight: 500; color: #574c49; }
 
-        /* Filtros e Grid do Catálogo */
-        .filter-buttons { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+        /* Filtros e Catálogo */
+        .filter-group { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
         .filter-btn { background-color: #ffffff; border: 1px solid #eee5e2; padding: 8px 20px; border-radius: 30px; font-family: 'Poppins', sans-serif; cursor: pointer; font-size: 0.9rem; color: #574c49; transition: all 0.2s; }
         .filter-btn:hover, .filter-btn.active { background-color: #1e1918; color: #ffffff; border-color: #1e1918; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
         
-        /* Card de Produto */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
         .product-card { background-color: #ffffff; border: 1px solid #f2eae8; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.04); }
-        .product-img-wrap { height: 240px; position: relative; background-color: #faf7f7; overflow: hidden; }
-        .product-img-wrap img { width: 100%; height: 100%; transition: transform 0.5s; }
-        .product-card:hover .product-img-wrap img { transform: scale(1.05); }
+        .product-img { height: 240px; position: relative; background-color: #faf7f7; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; transition: transform 0.5s; }
+        .product-card:hover .product-img img { transform: scale(1.05); }
+        
         .skin-tag { position: absolute; bottom: 12px; left: 12px; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; font-weight: 500; color: #fff; }
         .tag-oleosa { background-color: #7b8e76; }
         .tag-seca { background-color: #ca9286; }
         .tag-mista { background-color: #cca47c; }
-        .product-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-category { font-size: 0.75rem; text-transform: uppercase; color: #c98e76; font-weight: 600; margin-bottom: 5px; }
-        .product-info h3 { font-size: 1.15rem; color: #1e1918; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
-        .product-info p { font-size: 0.85rem; color: #7a6c68; margin-bottom: 20px; flex-grow: 1; }
+        
+        .product-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-cat { font-size: 0.75rem; text-transform: uppercase; color: #c98e76; font-weight: 600; margin-bottom: 5px; }
+        .product-body h3 { font-size: 1.15rem; color: #1e1918; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+        .product-body p { font-size: 0.85rem; color: #7a6c68; margin-bottom: 20px; flex-grow: 1; }
         .product-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #faf7f7; padding-top: 15px; }
         .product-price { font-size: 1.2rem; font-weight: 600; color: #1e1918; }
-        .btn-add-cart { background-color: #f6f0ed; color: #1e1918; border: none; padding: 8px 18px; border-radius: 20px; font-weight: 500; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
-        .btn-add-cart:hover { background-color: #1e1918; color: #ffffff; }
 
-        /* Cronograma Visual */
-        .grid-cronograma { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .bloco-cronograma { background-color: #ffffff; padding: 35px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); border: 1px solid #eee5e2; }
-        .cronograma-header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #f6f0ed; padding-bottom: 15px; }
+        /* Cronograma de Passos */
+        .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .timeline-box { background-color: #ffffff; padding: 35px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); border: 1px solid #eee5e2; }
+        .timeline-header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #f6f0ed; padding-bottom: 15px; }
         .astro-icon { font-size: 2.2rem; display: block; margin-bottom: 5px; }
-        .cronograma-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1e1918; }
-        .objetivo-tag { font-size: 0.8rem; color: #b56c4d; text-transform: uppercase; font-weight: 500; }
-        .lista-cronograma { list-style: none; }
-        .lista-cronograma li { padding: 12px 0; border-bottom: 1px dashed #eee5e2; font-size: 0.9rem; color: #574c49; }
-        .lista-cronograma li:last-child { border-bottom: none; }
+        .timeline-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1e1918; }
+        .focus-tag { font-size: 0.8rem; color: #b56c4d; text-transform: uppercase; font-weight: 500; }
+        .timeline-list { list-style: none; }
+        .timeline-list li { padding: 12px 0; border-bottom: 1px dashed #eee5e2; font-size: 0.9rem; color: #574c49; }
+        .timeline-list li:last-child { border-bottom: none; }
 
-        /* Sidebar do Carrinho */
+        /* Menu Lateral do Carrinho */
         .cart-sidebar { position: fixed; top: 0; right: -400px; width: 400px; height: 100vh; background-color: #ffffff; box-shadow: -5px 0 30px rgba(0,0,0,0.05); z-index: 1001; display: flex; flex-direction: column; transition: right 0.3s ease; }
         .cart-sidebar.open { right: 0; }
-        .cart-header { padding: 25px; border-bottom: 1px solid #f2eae8; display: flex; justify-content: space-between; align-items: center; }
-        .cart-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
-        .close-cart { background: none; border: none; font-size: 2rem; cursor: pointer; color: #7a6c68; }
-        .cart-items-list { padding: 25px; overflow-y: auto; flex-grow: 1; }
-        .empty-message { color: #7a6c68; text-align: center; margin-top: 40px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #faf7f7; }
-        .cart-item-details h4 { font-size: 0.9rem; color: #1e1918; margin-bottom: 3px; }
-        .cart-item-details span { font-size: 0.85rem; color: #c98e76; font-weight: 500; }
-        .btn-remove-item { background: none; border: none; color: #c96b6b; cursor: pointer; font-size: 0.85rem; }
-        .cart-footer { padding: 25px; border-top: 1px solid #f2eae8; background-color: #faf7f7; }
-        .cart-total-row { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #1e1918; }
-        .btn-checkout { width: 100%; background-color: #1e1918; color: #ffffff; border: none; padding: 15px; border-radius: 30px; font-size: 1rem; font-weight: 500; cursor: pointer; font-family: 'Poppins', sans-serif; transition: background-color 0.2s; }
-        .btn-checkout:hover { background-color: #c98e76; }
-        .cart-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3); z-index: 1000; display: none; }
-        .cart-overlay.open { display: block; }
+        .cart-sidebar-header { padding: 25px; border-bottom: 1px solid #f2eae8; display: flex; justify-content: space-between; align-items: center; }
+        .cart-sidebar-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+        .close-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: #7a6c68; }
+        .cart-items-wrapper { padding: 25px; overflow-y: auto; flex-grow: 1; }
+        .cart-empty { color: #7a6c68; text-align: center; margin-top: 40px; }
+        
+        .item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #faf7f7; }
+        .item-info h4 { font-size: 0.9rem; color: #1e1918; margin-bottom: 3px; }
+        .item-info span { font-size: 0.85rem; color: #c98e76; font-weight: 500; }
+        .remove-btn { background: none; border: none; color: #c96b6b; cursor: pointer; font-size: 0.85rem; }
+        
+        .cart-sidebar-footer { padding: 25px; border-top: 1px solid #f2eae8; background-color: #faf7f7; }
+        .total-row { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #1e1918; }
+        
+        .overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3); z-index: 1000; display: none; }
+        .overlay.open { display: block; }
 
         /* Rodapé */
-        .main-footer { background-color: #1e1918; color: #ebdcd7; text-align: center; padding: 40px 20px; font-size: 0.85rem; }
+        .footer { background-color: #1e1918; color: #ebdcd7; text-align: center; padding: 40px 20px; font-size: 0.85rem; }
 
         /* Responsividade */
         @media (max-width: 768px) {
-            
+            .header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav ul { gap: 15px; }
+            .hero { padding: 0 20px; text-align: center; }
+            .hero h1 { font-size: 2.4rem; }
+            .section-title { font-size: 2.1rem; }
+            .cart-sidebar { width: 100%; right: -100%; }
         }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="header">
+        <div class="logo">Vesta<span>Derm</span></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#rotinas">Ordem de Uso</a></li>
+            </ul>
+        </nav>
