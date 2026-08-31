@@ -3,131 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vesta Derm | Skincare Premium & Inteligente</title>
+    <title>Vesta Derm | O Ritual da Pele Radiante</title>
     
-    <!-- Fontes do Google para design de alta costura e estética -->
+    <!-- Fontes do Google: Playfair Display para títulos luxuosos e Poppins para leitura leve -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS INTEGRADO (Visual e Animações) -->
+    <!-- CSS INTEGRADO (Visual Estético e Premium) -->
     <style>
-        /* Estilos de Reset e Base */
+        /* Reset de Margens e Base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: 'Poppins', sans-serif; color: #433c3a; background-color: #fdfcfc; line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Poppins', sans-serif; color: #433c3a; background-color: #fdfcfc; line-height: 1.6; }
         img { max-width: 100%; height: auto; display: block; object-fit: cover; }
 
-        /* Estrutura do Layout */
-        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
-        .bg-light { background-color: #f6f0ed; }
-        .text-center { text-align: center; max-width: 700px; margin: 0 auto 50px auto; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; color: #1e1918; margin-bottom: 12px; }
-        .section-subtitle { font-size: 1.1rem; color: #7a6c68; font-weight: 300; }
+        /* Utilitários */
+        .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
+        .text-center { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+        
+        /* Tipografia de Luxo */
+        .cover-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1e1918; margin-bottom: 15px; font-weight: 600; }
+        .cover-subtitle { font-size: 1.15rem; color: #7a6c68; font-weight: 300; letter-spacing: 0.5px; }
 
-        /* Menu de Navegação */
-        .header { background-color: rgba(253, 252, 252, 0.96); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); backdrop-filter: blur(8px); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: #1e1918; letter-spacing: 0.5px; }
+        /* Menu Superior Discreto */
+        .header { background-color: rgba(253, 252, 252, 0.96); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; box-shadow: 0 2px 25px rgba(0,0,0,0.02); backdrop-filter: blur(8px); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #1e1918; letter-spacing: 0.5px; }
         .logo span { color: #c98e76; font-weight: 400; }
-        .nav ul { display: flex; list-style: none; gap: 30px; }
-        .nav a { text-decoration: none; color: #574c49; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
-        .nav a:hover { color: #c98e76; }
+        .nav-btn { text-decoration: none; color: #ffffff; background-color: #1e1918; padding: 10px 25px; border-radius: 50px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+        .nav-btn:hover { background-color: #c98e76; }
 
-        /* Ícone do Carrinho */
-        .cart-icon { cursor: pointer; position: relative; padding: 8px; background-color: #f6f0ed; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
-        .cart-icon:hover { transform: scale(1.05); }
-        .cart-badge { position: absolute; top: -3px; right: -3px; background-color: #1e1918; color: #fff; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+        /* --- CAPA PRINCIPAL (HERO BANNER) --- */
+        .hero-section { background: linear-gradient(rgba(246, 240, 246, 0.5), rgba(253, 252, 252, 0.95)), url('https://unsplash.com') center/cover no-repeat; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; margin-top: 80px; }
+        .hero-inner { max-width: 800px; }
+        .hero-tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 4px; color: #b56c4d; font-weight: 600; display: block; margin-bottom: 20px; }
+        .hero-inner h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: #1e1918; line-height: 1.15; margin-bottom: 25px; }
+        .hero-inner p { font-size: 1.2rem; color: #574c49; margin-bottom: 40px; font-weight: 300; }
+        .btn-discover { display: inline-block; background-color: #1e1918; color: #ffffff; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-weight: 500; letter-spacing: 1px; box-shadow: 0 5px 20px rgba(30, 25, 24, 0.15); transition: all 0.3s; }
+        .btn-discover:hover { background-color: #c98e76; transform: translateY(-3px); }
 
-        /* Banner Principal (Hero) */
-        .hero { background: linear-gradient(rgba(246, 240, 246, 0.55), rgba(253, 252, 252, 0.93)), url('https://unsplash.com') center/cover no-repeat; height: 80vh; display: flex; align-items: center; padding: 0 50px; margin-top: 70px; }
-        .hero-content { max-width: 680px; }
-        .hero-tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: #b56c4d; font-weight: 600; display: block; margin-bottom: 15px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #1e1918; line-height: 1.15; margin-bottom: 20px; }
-        .hero p { font-size: 1.15rem; color: #574c49; margin-bottom: 30px; font-weight: 300; }
-        .btn { display: inline-block; background-color: #1e1918; color: #ffffff; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 500; box-shadow: 0 4px 15px rgba(30, 25, 24, 0.15); transition: all 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background-color: #c98e76; transform: translateY(-2px); }
+        /* --- VITRINE DAS CATEGORIAS (MOSAICO/GRID) --- */
+        .showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        
+        /* Cartão de Categoria */
+        .category-card { background-color: #ffffff; border-radius: 24px; overflow: hidden; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.015); border: 1px solid #eee5e2; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease; }
+        .category-card:hover { transform: translateY(-8px); border-color: #c98e76; }
+        
+        /* Invólucro da Imagem */
+        .card-img-wrap { height: 280px; overflow: hidden; position: relative; background-color: #f6f0ed; }
+        .card-img-wrap img { width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+        .category-card:hover .card-img-wrap img { transform: scale(1.06); }
+        
+        /* Emblema interno na foto */
+        .category-badge { position: absolute; top: 20px; left: 20px; background-color: rgba(253, 252, 252, 0.92); color: #1e1918; font-size: 0.75rem; text-transform: uppercase; font-weight: 600; padding: 6px 14px; border-radius: 30px; letter-spacing: 1px; backdrop-filter: blur(4px); }
 
-        /* Faixa de Benefícios */
-        .benefits { background-color: #f6f0ed; display: flex; justify-content: space-around; padding: 18px; flex-wrap: wrap; gap: 15px; border-bottom: 1px solid #eee5e2; }
-        .benefit-item { font-size: 0.9rem; font-weight: 500; color: #574c49; }
-
-        /* Filtros e Catálogo */
-        .filter-group { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
-        .filter-btn { background-color: #ffffff; border: 1px solid #eee5e2; padding: 8px 20px; border-radius: 30px; font-family: 'Poppins', sans-serif; cursor: pointer; font-size: 0.9rem; color: #574c49; transition: all 0.2s; }
-        .filter-btn:hover, .filter-btn.active { background-color: #1e1918; color: #ffffff; border-color: #1e1918; }
+        /* Corpo de texto do Cartão */
+        .card-body { padding: 40px 35px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: #1e1918; margin-bottom: 12px; font-weight: 600; }
+        .card-body p { font-size: 0.95rem; color: #7a6c68; font-weight: 300; margin-bottom: 25px; flex-grow: 1; }
         
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
-        .product-card { background-color: #ffffff; border: 1px solid #f2eae8; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.04); }
-        .product-img { height: 240px; position: relative; background-color: #faf7f7; overflow: hidden; }
-        .product-img img { width: 100%; height: 100%; transition: transform 0.5s; }
-        .product-card:hover .product-img img { transform: scale(1.05); }
-        
-        .skin-tag { position: absolute; bottom: 12px; left: 12px; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; font-weight: 500; color: #fff; }
-        .tag-oleosa { background-color: #7b8e76; }
-        .tag-seca { background-color: #ca9286; }
-        .tag-mista { background-color: #cca47c; }
-        
-        .product-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-cat { font-size: 0.75rem; text-transform: uppercase; color: #c98e76; font-weight: 600; margin-bottom: 5px; }
-        .product-body h3 { font-size: 1.15rem; color: #1e1918; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
-        .product-body p { font-size: 0.85rem; color: #7a6c68; margin-bottom: 20px; flex-grow: 1; }
-        .product-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #faf7f7; padding-top: 15px; }
-        .product-price { font-size: 1.2rem; font-weight: 600; color: #1e1918; }
-
-        /* Cronograma de Passos */
-        .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .timeline-box { background-color: #ffffff; padding: 35px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.01); border: 1px solid #eee5e2; }
-        .timeline-header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #f6f0ed; padding-bottom: 15px; }
-        .astro-icon { font-size: 2.2rem; display: block; margin-bottom: 5px; }
-        .timeline-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1e1918; }
-        .focus-tag { font-size: 0.8rem; color: #b56c4d; text-transform: uppercase; font-weight: 500; }
-        .timeline-list { list-style: none; }
-        .timeline-list li { padding: 12px 0; border-bottom: 1px dashed #eee5e2; font-size: 0.9rem; color: #574c49; }
-        .timeline-list li:last-child { border-bottom: none; }
-
-        /* Menu Lateral do Carrinho */
-        .cart-sidebar { position: fixed; top: 0; right: -400px; width: 400px; height: 100vh; background-color: #ffffff; box-shadow: -5px 0 30px rgba(0,0,0,0.05); z-index: 1001; display: flex; flex-direction: column; transition: right 0.3s ease; }
-        .cart-sidebar.open { right: 0; }
-        .cart-sidebar-header { padding: 25px; border-bottom: 1px solid #f2eae8; display: flex; justify-content: space-between; align-items: center; }
-        .cart-sidebar-header h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
-        .close-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: #7a6c68; }
-        .cart-items-wrapper { padding: 25px; overflow-y: auto; flex-grow: 1; }
-        .cart-empty { color: #7a6c68; text-align: center; margin-top: 40px; }
-        
-        .item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #faf7f7; }
-        .item-info h4 { font-size: 0.9rem; color: #1e1918; margin-bottom: 3px; }
-        .item-info span { font-size: 0.85rem; color: #c98e76; font-weight: 500; }
-        .remove-btn { background: none; border: none; color: #c96b6b; cursor: pointer; font-size: 0.85rem; }
-        
-        .cart-sidebar-footer { padding: 25px; border-top: 1px solid #f2eae8; background-color: #faf7f7; }
-        .total-row { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #1e1918; }
-        
-        .overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3); z-index: 1000; display: none; }
-        .overlay.open { display: block; }
+        /* Link de ação elegante */
+        .card-link { text-decoration: none; color: #1e1918; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s; }
+        .card-link::after { content: "→"; transition: transform 0.2s; }
+        .category-card:hover .card-link { color: #c98e76; }
+        .category-card:hover .card-link::after { transform: translateX(5px); }
 
         /* Rodapé */
-        .footer { background-color: #1e1918; color: #ebdcd7; text-align: center; padding: 40px 20px; font-size: 0.85rem; }
+        .footer { background-color: #1e1918; color: #ebdcd7; text-align: center; padding: 50px 20px; font-size: 0.9rem; }
+        .footer p:last-child { opacity: 0.5; font-weight: 300; margin-top: 8px; font-size: 0.8rem; }
 
-        /* Responsividade */
+        /* Responsividade para Celulares */
         @media (max-width: 768px) {
-            .header { padding: 15px 20px; flex-direction: column; gap: 10px; }
-            .nav ul { gap: 15px; }
-            .hero { padding: 0 20px; text-align: center; }
-            .hero h1 { font-size: 2.4rem; }
-            .section-title { font-size: 2.1rem; }
-            .cart-sidebar { width: 100%; right: -100%; }
+            .header { padding: 15px 25px; }
+            .logo { font-size: 1.6rem; }
+            .hero-section { height: auto; padding: 120px 20px 80px 20px; }
+            .hero-inner h1 { font-size: 2.6rem; }
+            .hero-inner p { font-size: 1.05rem; }
+            .cover-title { font-size: 2.2rem; }
+            .container { padding: 60px 20px; }
+            .card-body { padding: 30px 25px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- Cabeçalho Fixo -->
     <header class="header">
         <div class="logo">Vesta<span>Derm</span></div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#rotinas">Ordem de Uso</a></li>
-            </ul>
-        </nav>
+        <a href="#universo" class="nav-btn">Conhecer Linhas</a>
+    </header>
+
+    <!-- Seção de Abertura / Impacto (Hero) -->
+    <section class="hero-section">
+        <div class="hero-inner">
+            <span class="hero-tag">A Ciência do Autocuidado Absoluto</span>
+            <h1>Desperte a pureza e a saúde da sua pele</h1>
+            <p>Fórmulas botânicas e dermatológicas minimalistas criadas para abraçar a identidade biológica do seu rosto. Conheça as cinco bases do equilíbrio cutâneo.</p>
+            <a href="#universo" class="btn-discover">Explorar os Essenciais</a>
+        </div>
+    </section>
+
+    <!-- Vitrine Arquitetônica das Categoria de Skincare -->
+    <main id="universo" class="container">
+        <div class="text-center">
+            <h2 class="cover-title">Os Cinco Pilares da Derme</h2>
+            <p class="cover-subtitle">Entenda o papel anatômico de cada categoria e descubra a textura desenvolvida especialmente para o seu momento de autocuidado.</p>
+        </div>
+
+        <div class="showcase-grid">
+
+            <!-- 1. PROTETOR SOLAR -->
+            <article class="category-card">
+                <div class="card-img-wrap">
+                    <img src="https://unsplash.com" alt="Textura fluida de protetor solar">
+                    <span class="category-badge">Proteção Diária</span>
+                </div>
+                <div class="card-body">
+                    <h3>Protetores Solares</h3>
+                    <p>O escudo definitivo contra o envelhecimento precoce e a radiação ultravioleta. Previne manchas, flacidez celular e preserva o colágeno natural da pele.</p>
+                    <a href="#" class="card-link" onclick="alert('Linha de Protetores Solares em desenvolvimento.')">Ver texturas disponíveis</a>
+                </div>
+            </article>
+
+            <!-- 2. HIDRATANTES -->
+            <article class="category-card">
+                <div class="card-img-wrap">
+                    <img src="https://unsplash.com" alt="Creme hidratante sendo espalhado">
+                    <span class="category-badge">Nutrição Ativa</span>
+                </div>
+                <div class="card-body">
+                    <h3>Hidratantes</h3>
+                    <p>Fórmulas inteligentes que selam a barreira cutânea, impedindo a perda de água transepidérmica. Devolvem a elasticidade, maciez e o viço acetinado.</p>
+                    <a href="#" class="card-link" onclick="alert('Linha de Hidratantes em desenvolvimento.')">Ver texturas disponíveis</a>
+                </div>
+            </article>
+
+            <!-- 3. SÉRUNS -->
+            <article class="category-card">
+                <div class="card-img-wrap">
+                    <img src="https://unsplash.com" alt="Frasco de vidro com conta-gotas de sérum">
+                    <span class="category-badge">Alta Concentração</span>
+                </div>
+                <div class="card-body">
+                    <h3>Séruns</h3>
+                    <p>Veículos fluidos de absorção celular ultrarrápida. Carregam altas dosagens de vitaminas e antioxidantes potentes para tratamentos focados.</p>
+                    <a href="#" class="card-link" onclick="alert('Linha de Séruns em desenvolvimento.')">Ver texturas disponíveis</a>
+                </div>
+            </article>
+
+            <!-- 4. ÁCIDOS -->
