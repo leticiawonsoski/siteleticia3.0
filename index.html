@@ -3,181 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vesta Derm | Alta Performance em Skincare</title>
+    <title>Vesta Derm | Loja Oficial de Skincare</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Menu de Navegação Superior -->
+    <!-- Cabeçalho Principal da Loja -->
     <header class="main-header">
         <div class="logo">Vesta<span>Derm</span></div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="#passos">Os 3 Passos</a></li>
-                <li><a href="#cronograma">Dia & Noite</a></li>
-                <li><a href="#produtos">Guia de Ativos</a></li>
-                <li><a href="#tipos-pele">Tipos de Pele</a></li>
+                <li><a href="#catalogo">Produtos</a></li>
+                <li><a href="#beneficios">Diferenciais</a></li>
             </ul>
         </nav>
+        <!-- Ícone do Carrinho de Compras -->
+        <div class="cart-icon-container" id="cart-toggle">
+            <span class="cart-emoji">🛒</span>
+            <span id="cart-count" class="cart-count">0</span>
+        </div>
     </header>
 
-    <!-- Banner Principal (Hero) com Imagem de Fundo Premium -->
+    <!-- Banner Comercial de Destaque -->
     <section class="hero-banner">
         <div class="hero-content">
-            <span class="hero-tagline">✨ O ritual sagrado da sua pele</span>
-            <h1>Sua pele saudável, radiante e protegida</h1>
-            <p>Descubra a ciência por trás do autocuidado. Na Vesta Derm, simplificamos a sua rotina com guias práticos focados nas reais necessidades do seu rosto.</p>
-            <a href="#tipos-pele" class="btn-primary">Descobrir Meu Tipo de Pele</a>
+            <span class="hero-tagline">✨ Frete grátis em compras acima de R$ 199</span>
+            <h1>A ciência da dermatologia na sua rotina</h1>
+            <p>Selecione seu tipo de pele abaixo e monte seu kit personalizado com fórmulas limpas, veganas e de alta performance.</p>
+            <a href="#catalogo" class="btn-primary">Ver Catálogo Completo</a>
         </div>
     </section>
 
-    <!-- Seção 1: Os 3 Passos Fundamentais (com Fotos Temáticas) -->
-    <section id="passos" class="section-container">
+    <!-- Seção de Benefícios Rápidos -->
+    <section id="beneficios" class="benefits-bar">
+        <div class="benefit-item"><span>🌿</span> Cruelty Free & Vegano</div>
+        <div class="benefit-item"><span>🧪</span> Testado Dermatologicamente</div>
+        <div class="benefit-item"><span>💳</span> 6x sem juros no cartão</div>
+    </section>
+
+    <!-- Catálogo de Compras -->
+    <section id="catalogo" class="section-container">
         <div class="center-text">
-            <h2 class="section-title">Os Três Pilares Indispensáveis</h2>
-            <p class="section-subtitle">Antes de inserir qualquer ativo avançado, construa uma barreira cutânea forte usando a tríade clássica da dermatologia.</p>
-        </div>
-        
-        <div class="grid-passos">
-            <div class="card-passo">
-                <div class="card-image-wrap">
-                    <img src="https://unsplash.com" alt="Limpeza facial delicada com água">
-                </div>
-                <div class="card-passo-content">
-                    <span class="numero">01</span>
-                    <h3>Limpar</h3>
-                    <p>Purifica a superfície, elimina resíduos de poluição e desobstrui os poros suavemente, mantendo a hidratação natural.</p>
-                </div>
-            </div>
-            <div class="card-passo">
-                <div class="card-image-wrap">
-                    <img src="https://unsplash.com" alt="Aplicação de hidratante facial em textura gel">
-                </div>
-                <div class="card-passo-content">
-                    <span class="numero">02</span>
-                    <h3>Hidratar</h3>
-                    <p>Fornece moléculas de água para as camadas celulares. Essencial para manter a elasticidade, jovialidade e o viço natural.</p>
-                </div>
-            </div>
-            <div class="card-passo">
-                <div class="card-image-wrap">
-                    <img src="https://unsplash.com" alt="Protetor solar sendo aplicado na pele exposta ao sol">
-                </div>
-                <div class="card-passo-content">
-                    <span class="numero">03</span>
-                    <h3>Proteger</h3>
-                    <p>O melhor produto antienvelhecimento que existe. Bloqueia a radiação ultravioleta, prevenindo manchas, flacidez e rugas precoces.</p>
-                </div>
+            <h2 class="section-title">Nossas Fórmulas</h2>
+            <p class="section-subtitle">Filtrar por necessidade ou tipo de pele:</p>
+            
+            <!-- Botões de Filtragem Dinâmica -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="oleosa">Pele Oleosa / Acneica</button>
+                <button class="filter-btn" data-filter="seca">Pele Seca / Sensível</button>
+                <button class="filter-btn" data-filter="mista">Pele Mista / Normal</button>
             </div>
         </div>
-    </section>
 
-    <!-- Seção: Cronograma Visual Dia & Noite -->
-    <section id="cronograma" class="section-bg-light">
-        <div class="section-container">
-            <div class="center-text">
-                <h2 class="section-title">Cronograma: Ordem de Aplicação</h2>
-                <p class="section-subtitle">Saber a sequência correta potencializa os resultados e evita desperdício de produto.</p>
-            </div>
-
-            <div class="grid-cronograma">
-                <!-- Rotina Diurna -->
-                <div class="bloco-cronograma dia">
-                    <div class="cronograma-header">
-                        <span class="astro-icon">☀️</span>
-                        <h3>Rotina da Manhã</h3>
-                        <span class="objetivo-tag">Foco: Proteção e Antioxidantes</span>
+        <!-- Grid de Exibição dos Produtos -->
+        <div class="products-grid" id="products-container">
+            
+            <!-- Produto 1 -->
+            <div class="product-card" data-skin="oleosa">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Gel de Limpeza Ácido Salicílico">
+                    <span class="skin-tag tag-oleosa">Pele Oleosa</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Limpeza</span>
+                    <h3>Gel de Limpeza Purificante 150g</h3>
+                    <p>Com Ácido Salicílico e Zinco PCA. Desobstrui poros e controla o brilho sem repuxar.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 54,90</span>
+                        <button class="btn-add-cart" data-id="1" data-name="Gel de Limpeza Purificante" data-price="54.90">Adicionar</button>
                     </div>
-                    <ol class="lista-cronograma">
-                        <li><strong>1. Sabonete Facial:</strong> Limpeza leve para remover os produtos da noite.</li>
-                        <li><strong>2. Tônico / Bruma:</strong> Devolve o equilíbrio e refresca a pele.</li>
-                        <li><strong>3. Vitamina C / Sérum:</strong> Previne o envelhecimento causado pelo sol.</li>
-                        <li><strong>4. Hidratante:</strong> Mantém a água na pele ao longo do dia.</li>
-                        <li><strong>5. Protetor Solar:</strong> O passo mais importante. Não pule nunca!</li>
-                    </ol>
                 </div>
+            </div>
 
-                <!-- Rotina Noturna -->
-                <div class="bloco-cronograma noite">
-                    <div class="cronograma-header">
-                        <span class="astro-icon">🌙</span>
-                        <h3>Rotina da Noite</h3>
-                        <span class="objetivo-tag">Foco: Renovação e Nutrição</span>
+            <!-- Produto 2 -->
+            <div class="product-card" data-skin="seca">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Loção de Limpeza Hidratante">
+                    <span class="skin-tag tag-seca">Pele Seca</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Limpeza</span>
+                    <h3>Leite de Limpeza Hidratante 200ml</h3>
+                    <p>Fórmula cremosa com Ceramidas e Vitamina E. Limpa profundamente nutrindo peles ressecadas.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 59,90</span>
+                        <button class="btn-add-cart" data-id="2" data-name="Leite de Limpeza Hidratante" data-price="59.90">Adicionar</button>
                     </div>
-                    <ol class="lista-cronograma">
-                        <li><strong>1. Limpeza Dupla (Opcional):</strong> Óleo de limpeza seguido por sabonete.</li>
-                        <li><strong>2. Ácidos / Tratamento:</strong> Retinol, Ácido Glicólico ou ativos renovadores.</li>
-                        <li><strong>3. Creme de Olhos:</strong> Hidratação focada na região sensível das pálpebras.</li>
-                        <li><strong>4. Hidratante Rico:</strong> Texturas mais densas para regeneração celular noturna.</li>
-                    </ol>
                 </div>
             </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card" data-skin="mista">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Tônico Equilibrante Niacinamida">
+                    <span class="skin-tag tag-mista">Pele Mista</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Equilíbrio</span>
+                    <h3>Tônico Equilibrante Prebiótico 120ml</h3>
+                    <p>Regula o pH das áreas mistas (Zona T), hidrata as extremidades e reduz aparência de poros dilatados.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 48,00</span>
+                        <button class="btn-add-cart" data-id="3" data-name="Tônico Equilibrante Prebiótico" data-price="48.00">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card" data-skin="oleosa">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Sérum Antiacne Ultra">
+                    <span class="skin-tag tag-oleosa">Pele Oleosa</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Tratamento</span>
+                    <h3>Sérum Antiacne & Marcas 30ml</h3>
+                    <p>Contém Niacinamida 10% e Ácido Mandélico. Reduz espinhas ativas e uniformiza o tom do rosto.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 89,90</span>
+                        <button class="btn-add-cart" data-id="4" data-name="Sérum Antiacne & Marcas" data-price="89.90">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="product-card" data-skin="seca">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Creme Ultra Hidratante">
+                    <span class="skin-tag tag-seca">Pele Seca</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Hidratação</span>
+                    <h3>Creme Rico Reparador Hialurônico 50g</h3>
+                    <p>Com Ácido Hialurônico e Manteiga de Karité. Reposição lipídica profunda por 24 horas.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 74,95</span>
+                        <button class="btn-add-cart" data-id="5" data-name="Creme Rico Reparador" data-price="74.95">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="product-card" data-skin="todos">
+                <div class="product-img-wrap">
+                    <img src="https://unsplash.com" alt="Protetor Solar Fluido">
+                    <span class="skin-tag tag-todos">Todos os Tipos</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Proteção</span>
+                    <h3>Protetor Solar Fluido FPS 60 50ml</h3>
+                    <p>Toque invisível e acabamento natural sem resíduos brancos. Proteção UVA/UVB e luz azul.</p>
+                    <div class="product-footer">
+                        <span class="product-price">R$ 68,00</span>
+                        <button class="btn-add-cart" data-id="6" data-name="Protetor Solar Fluido FPS 60" data-price="68.00">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Seção: Dicionário de Ativos e Produtos (com Mosaico Visual de Frascos) -->
-    <section id="produtos" class="section-container">
-        <div class="layout-split-produtos">
-            <div class="produtos-texto-lado">
-                <h2 class="section-title">Dicionário Vesta Derm</h2>
-                <p class="section-subtitle-lado">Entenda a função técnica e prática de cada categoria no seu estoque de beleza.</p>
-                
-                <div class="grid-produtos">
-                    <article class="item-produto">
-                        <div class="produto-header">
-                            <span class="badge">Limpeza</span>
-                            <h3>Gel/Sabonete Facial</h3>
-                        </div>
-                        <p>Fórmulas desenvolvidas especificamente para o pH do rosto. Limpam sem causar o "efeito rebote" que sabonetes corporais provocam.</p>
-                    </article>
-
-                    <article class="item-produto">
-                        <div class="produto-header">
-                            <span class="badge">Equilíbrio</span>
-                            <h3>Tônico Facial</h3>
-                        </div>
-                        <p>Líquido de absorção instantânea que prepara a barreira cutânea, facilitando a penetração profunda de cremes e séruns densos.</p>
-                    </article>
-
-                    <article class="item-produto">
-                        <div class="produto-header">
-                            <span class="badge">Tratamento</span>
-                            <h3>Sérum Concentrado</h3>
-                        </div>
-                        <p>Veículo leve e fluído, ideal para entregar altas dosagens de vitaminas e ácidos diretamente nas camadas internas da derme.</p>
-                    </article>
-
-                    <article class="item-produto">
-                        <div class="produto-header">
-                            <span class="badge">Nutrição</span>
-                            <h3>Creme ou Gel Hidratante</h3>
-                        </div>
-                        <p>Atua selando os passos anteriores. Impede que a umidade natural evapore, mantendo o aspecto macio e a barreira intacta.</p>
-                    </article>
-                </div>
-            </div>
-            <div class="produtos-imagem-lado">
-                <img src="https://unsplash.com" alt="Frascos de vidro minimalistas de séruns e óleos de skincare em fundo claro">
-            </div>
+    <!-- Aba Lateral do Carrinho (Sidebar) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart" id="cart-close">×</button>
         </div>
-    </section>
-
-    <!-- Seção: Guia por Tipo de Pele -->
-    <section id="tipos-pele" class="section-bg-light">
-        <div class="section-container">
-            <div class="center-text">
-                <h2 class="section-title">O Match Perfeito Para Sua Pele</h2>
-                <p class="section-subtitle">A escolha inteligente depende da textura ideal para a sua genética cutânea. Identifique-se abaixo:</p>
+        <div class="cart-items-list" id="cart-items">
+            <!-- Os itens adicionados via JS entram aqui -->
+            <p class="empty-message">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
             </div>
+            <button class="btn-checkout" onclick="alert('Checkout simulado com sucesso! Obrigado por comprar na Vesta Derm.')">Finalizar Pedido</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
 
-            <div class="grid-pele">
-                <!-- Pele Oleosa -->
-                <div class="card-pele oleosa">
-                    <div class="pele-tag">Pele Oleosa / Acneica</div>
-                    <p class="caracteristica">Apresenta brilho excessivo ao longo do dia, poros aparentes na zona central e tendência ao desenvolvimento de acne.</p>
-                    <div class="rotina-sugerida">
-                        <h4>Ativos e Texturas:</h4>
-                        <ul>
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Vesta Derm Lab. Tecnologia Cosmética Avançada.</p>
